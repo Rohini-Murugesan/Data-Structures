@@ -1,0 +1,30 @@
+  class Stack{
+      constructor(){
+        this.Stack = {};
+        this.len = 0;
+      }
+      push(val){
+        
+        this.Stack[this.len] = val;
+        this.len++;
+        console.log(this.Stack)
+      }
+      pop(){
+        let LastVal = this.Stack[this.len - 1]
+        this.len--;
+        return LastVal;
+       
+      }
+      peek(){
+        return this.Stack[this.len - 1]
+      }
+  }
+  var S = new Stack();
+  S.push(2);
+  S.push(4);
+  S.push(6);
+  S.push(8);
+  r = S.pop();
+  console.log("popped val ",r);
+  r = S.peek();
+  console.log("peek ",r)
